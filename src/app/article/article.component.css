@@ -1,0 +1,57 @@
+:host > div {
+    background-color: lightgrey;
+    margin: 5px;
+}
+.votes {
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: xx-large;
+    width: 50px;
+}
+.controls {
+    width: 100px;
+}
+.controls ul {
+    list-style: none;
+    margin-left:0;
+    padding-left:0;
+}
+.controls ul li {
+    margin: 3px;
+}
+.article{
+    margin-top: 20px;
+    width:200px;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    justify-content: flex-start;
+}
+
+.arrow-up:active {
+    border-bottom-color: darkgreen;
+}
+.arrow-down:active {
+  border-top: 20px solid darkred;
+}
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-bottom: 20px solid green;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid red;
+}
+
