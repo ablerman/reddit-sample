@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, trigger, state, transition, style, animate } from '@angular/core';
 import {Article} from '../article';
 import { UUID } from 'angular2-uuid';
 import {addArticle} from "../store/actioncreators";
@@ -6,7 +6,18 @@ import {StoreService} from "../store.service";
 @Component({
   selector: 'app-reddit',
   templateUrl: './reddit.component.html',
-  styleUrls: ['./reddit.component.css']
+  styleUrls: ['./reddit.component.css'],
+  animations: [
+      trigger('fadeTrigger', [
+        state('in', style({ opacity: '1' })),
+        transition('void => *', [style({ opacity: '0' }),
+          animate('100ms 300ms')
+        ]),
+        transition('* => void', [
+          animate('50ms', style({ opacity: '0' }))
+        ])
+      ])
+  ]
 })
 export class RedditComponent implements OnInit {
   store:StoreService;
