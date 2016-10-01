@@ -1,24 +1,29 @@
 <div>
-    <form class="ui large form segment">
-      <h3 class="ui header">Add a Link</h3>
-      <div class="field">
-        <label for="title">Title:</label>
-        <input name="title" #newtitle>
-      </div>
-      <div class="field">
-        <label for="link">Link:</label>
-        <input name="link" #newlink>
-      </div>
-      
-        <button (click)="addArticle(newtitle, newlink)" class="ui positive right floated button">
-            Submit link
-        </button>      
-    </form> 
-    
+    <md-card>
+        <md-card-header>
+            <md-card-title>
+                Add a link
+            </md-card-title>
+        </md-card-header>
+        <form class="">
+            <md-card-content>
+                <div class="field">
+                    <md-input name="title" #newtitle placeholder="Title"></md-input>
+                </div>
+                <div class="field">
+                    <md-input name="link" #newlink placeholder="Link"></md-input>
+                </div>
+            </md-card-content>
+            <md-card-actions>
+                <button md-button [disabled]="newtitle.value == '' || newlink.value == ''"
+                        (click)="addArticle(newtitle, newlink)" color="primary">Submit link</button>
+            </md-card-actions>
+        </form>
+    </md-card>
     <div class="posts">
         <reddit-article class="my-animation"
-            *ngFor="let article of articles"
-            [article]="article">
+                        *ngFor="let article of articles"
+                        [article]="article">
         </reddit-article>
     </div>
 </div>

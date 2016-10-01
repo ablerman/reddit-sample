@@ -7,17 +7,7 @@ import {StoreService} from "../store.service";
   selector: 'app-reddit',
   templateUrl: './reddit.component.html',
   styleUrls: ['./reddit.component.css'],
-  animations: [
-      trigger('fadeTrigger', [
-        state('in', style({ opacity: '1' })),
-        transition('void => *', [style({ opacity: '0' }),
-          animate('100ms 300ms')
-        ]),
-        transition('* => void', [
-          animate('50ms', style({ opacity: '0' }))
-        ])
-      ])
-  ]
+  animations: []
 })
 export class RedditComponent implements OnInit {
   store:StoreService;

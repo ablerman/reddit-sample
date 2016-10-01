@@ -1,24 +1,31 @@
-:host > div {
-    background-color: lightgrey;
-    margin: 5px;
+:host {
+    margin: 10px;
+}
+.title {
+    font-size: larger;
+    margin-top: 7px;
+    margin-left: 10px;
 }
 .votes {
-    margin-top: 20px;
-    margin-left: 50px;
     font-size: xx-large;
-    width: 50px;
     font-family: 'Roboto', sans-serif;
+    margin: 5px;
+}
+.up {
+    color: green;
+}
+.down {
+    color: red;
 }
 .controls {
-    width: 100px;
+    margin: 5px;
 }
-.controls ul {
-    list-style: none;
-    margin-left:0;
-    padding-left:0;
+.controls md-icon {
+    cursor: pointer;
+    font-size: xx-large;
 }
-.controls ul li {
-    margin: 3px;
+.controls md-icon:active {
+    color:blue;
 }
 .article{
     margin-top: 20px;
@@ -26,7 +33,13 @@
     font-size: larger;
 }
 
-.container {
+md-card-title {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    justify-content: flex-start;
+}
+md-card-header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
