@@ -6,7 +6,7 @@ import {StoreService} from "../store.service";
 @Component({
   selector: 'app-reddit',
   templateUrl: './reddit.component.html',
-  styleUrls: ['./reddit.component.css'],
+  styleUrls: ['./reddit.component.less'],
   animations: []
 })
 export class RedditComponent implements OnInit {

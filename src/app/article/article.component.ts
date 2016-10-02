@@ -11,7 +11,7 @@ import {upvote, downvote} from "../store/actioncreators";
     class: 'row'
   },
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
+  styleUrls: ['./article.component.less']
 })
 export class ArticleComponent implements OnInit {
   store:StoreService;
