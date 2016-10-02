@@ -8,6 +8,11 @@ md-card {
 .form > div {
     padding: 10px;
 }
+
+button[disabled] {
+    cursor: not-allowed;
+}
+
 @keyframes MyAnimation {
     0% {
         opacity: 1;
